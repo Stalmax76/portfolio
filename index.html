@@ -1,0 +1,23 @@
+<template src="@components/templates/main/main.html" locals='{
+		"title":"Vasyl Stelmakh — Frontend Developer & UI Engineer", 
+		"lang":"en",
+		"preloader": {
+			"enable":"true",
+			"once":"true"
+		},
+		"canonical": "",
+		"ogImage": "https://stalmax76.github.io/portfolio/img/prev.jpg",
+		"keywords":"frontend developer, UI engineer, portfolio, web development, JavaScript, HTML, CSS, SCSS", 
+		"description":"Portfolio of Vasyl Stelmakh — Frontend Developer & UI Engineer. I build fast, accessible and user‑friendly interfaces with clean structure, performance and attention to detail."
+	}'>
+	<block name="header">
+		<include src="@components/layout/header/header.html" locals='{"active":"Home"}'></include>
+	</block>
+	<block name="main">
+		<include src="@components/pages/index/index.html" locals="{}"></include>
+	</block>
+	<block name="footer">
+		<include src="@components/layout/footer/footer.html" locals="{}"></include>
+	</block>
+	<block name="popup"></block>
+</template>
