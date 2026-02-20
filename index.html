@@ -33,9 +33,9 @@
 		<meta name="application-name" content="TheStelmakh">
 		<meta name="msapplication-TileColor" content="#2d89ef">
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1771615468836"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1771615468836">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1771615468836">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1771616669354"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1771616669354">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1771616669354">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -370,77 +370,20 @@
 .projectcard--wide
 .projectcard--compact
 -->
-											<article data-fls-projectcard="" class="projectcard" data-category="Personal" data-fls-watcher="">
-												<div class="projectcard__media">
-													<picture>
-														<source media="(max-width: 600px)" srcset="./assets/img/projects/ecogran-600.webp" type="image/webp">
-														<source media="(max-width: 1200px)" srcset="./assets/img/projects/ecogran-1200.webp" type="image/webp">
-														<img alt="Project preview" src="./assets/img/projects/ecogran.webp">
-													</picture>
-													<span class="projectcard__badge">Personal</span>
-												</div>
-												<div class="projectcard__body">
-													<h3 class="projectcard__title">Landing for SaaS</h3>
-													<div class="projectcard__description">
-														<p>Responsive landing page focused on conversion and performance.</p>
-													</div>
-													<ul class="projectcard__meta">
-														<li>React</li>
-														<li>SCSS</li>
-														<li>Vite</li>
-													</ul>
-													<div class="projectcard__footer">
-														<span class="projectcard__status">Completed</span>
-														<div class="projectcard__actions">
-															<a href="https://#" target="_blank" rel="noopener noreferrer">Live</a>
-															<a href="https://#" target="_blank">GitHub</a>
-														</div>
-													</div>
-												</div>
-											</article>
-											<!-- модифікатори до майбутніх карток -->
 											<!--
-.projectcard--video
-.projectcard--case
-.projectcard--experiment
-.projectcard--wide
-.projectcard--compact
--->
-											<article data-fls-projectcard="" class="projectcard" data-category="Archived" data-fls-watcher="">
-												<div class="projectcard__media">
-													<picture>
-														<source media="(max-width: 600px)" srcset="./assets/img/projects/ecogran-600.webp" type="image/webp">
-														<source media="(max-width: 1200px)" srcset="./assets/img/projects/ecogran-1200.webp" type="image/webp">
-														<img alt="Project preview" src="./assets/img/projects/ecogran.webp">
-													</picture>
-													<span class="projectcard__badge">Archived</span>
-												</div>
-												<div class="projectcard__body">
-													<h3 class="projectcard__title">Landing for SaaS</h3>
-													<div class="projectcard__description">
-														<p>Responsive landing page focused on conversion and performance.</p>
-													</div>
-													<ul class="projectcard__meta">
-														<li>React</li>
-														<li>SCSS</li>
-														<li>Vite</li>
-													</ul>
-													<div class="projectcard__footer">
-														<span class="projectcard__status">Completed</span>
-														<div class="projectcard__actions">
-															<a href="https://#" target="_blank" rel="noopener noreferrer">Live</a>
-															<a href="https://#" target="_blank">GitHub</a>
-														</div>
-													</div>
-												</div>
-											</article>
-											<!-- модифікатори до майбутніх карток -->
-											<!--
-.projectcard--video
-.projectcard--case
-.projectcard--experiment
-.projectcard--wide
-.projectcard--compact
+<include src="@components/custom/projectcard/projectcard.html" locals='{
+"imgUrl":"@img/projects/ecogran.jpg",
+"imgAlt":"Project preview",
+"category":"Archived",
+"badge":"Archived",
+"title":"Landing for SaaS",
+"text":"Responsive landing page focused on conversion and performance.",
+"tech":["React","SCSS","Vite"],
+"status":"Completed",
+"liveUrl":"#",
+"githubUrl":"#"
+}'>
+</include>
 -->
 										</div>
 									</div>
