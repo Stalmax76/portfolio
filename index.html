@@ -1,23 +1,713 @@
-<template src="@components/templates/main/main.html" locals='{
-		"title":"Vasyl Stelmakh — Frontend Developer & UI Engineer", 
-		"lang":"en",
-		"preloader": {
-			"enable":"true",
-			"once":"true"
-		},
-		"canonical": "",
-		"ogImage": "https://stalmax76.github.io/portfolio/img/prev.jpg",
-		"keywords":"frontend developer, UI engineer, portfolio, web development, JavaScript, HTML, CSS, SCSS", 
-		"description":"Portfolio of Vasyl Stelmakh — Frontend Developer & UI Engineer. I build fast, accessible and user‑friendly interfaces with clean structure, performance and attention to detail."
-	}'>
-	<block name="header">
-		<include src="@components/layout/header/header.html" locals='{"active":"Home"}'></include>
-	</block>
-	<block name="main">
-		<include src="@components/pages/index/index.html" locals="{}"></include>
-	</block>
-	<block name="footer">
-		<include src="@components/layout/footer/footer.html" locals="{}"></include>
-	</block>
-	<block name="popup"></block>
-</template>
+<!doctype html>
+<html lang="en">
+	<head>
+		<style data-fls-preloader="true" rel="preload">
+			body > *:not(.fls-preloader) {opacity: 0;visibility: hidden;}[data-fls-preloader-loaded] body > *:not(.fls-preloader) {transition: opacity 0.5s ease 0s;opacity: 1;visibility: visible;}
+		</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- SEO -->
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="Vasyl Stelmakh">
+		<meta name="keywords" content="frontend developer, UI engineer, portfolio, web development, JavaScript, HTML, CSS, SCSS">
+		<meta name="description" content="Portfolio of Vasyl Stelmakh — Frontend Developer &amp;amp; UI Engineer. I build fast, accessible and user‑friendly interfaces with clean structure, performance and attention to detail.">
+		<title>Vasyl Stelmakh — Frontend Developer &amp;amp; UI Engineer</title>
+		<link rel="canonical" href="https:/stalmax76.github.io/portfolio/img/prev.jpg">
+		<meta property="og:title" content="Vasyl Stelmakh — Frontend Developer &amp;amp; UI Engineer">
+		<meta property="og:description" content="Portfolio of Vasyl Stelmakh — Frontend Developer &amp;amp; UI Engineer. I build fast, accessible and user‑friendly interfaces with clean structure, performance and attention to detail.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https:/stalmax76.github.io/portfolio/img/prev.jpg">
+		<meta property="og:image" content="https:/stalmax76.github.io/portfolio/img/prev.jpg">
+		<link rel="preload" href="./assets/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/BN-Chester-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/fav/android-chrome-192x192.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/fav/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/fav/favicon-16x16.png">
+		<link rel="manifest" href="./assets/img/fav/site.webmanifest">
+		<link rel="mask-icon" href="./assets/img/fav/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-title" content="TheStelmakh">
+		<meta name="application-name" content="TheStelmakh">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1771615468836"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1771615468836">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1771615468836">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="800" class="header">
+				<div class="header__container">
+					<div class="header__logo">
+						<div data-fls-logo="" class="logo">
+							<div class="logo__text" role="img" aria-label="Vasyl Stelmakh logo">
+								Vasyl
+								<span>St</span>
+							</div>
+						</div>
+					</div>
+					<div class="header__menu menu" id="menu" aria-hidden="true">
+						<nav class="menu__body" role="navigation" aria-label="Main navigation">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a data-fls-scrollto="#home" data-fls-scrollto-top="35" href="#home" class="menu__link menu__link--active" aria-current="page">Home</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto="#about" data-fls-scrollto-top="30" href="#about" class="menu__link">About</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto="#projects" data-fls-scrollto-top="30" href="#projects" class="menu__link">Projects</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto="#skills" data-fls-scrollto-top="30" href="#skills" class="menu__link">Skills &amp; Tools</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto="#contacts" data-fls-scrollto-top="30" href="#contacts" class="menu__link">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!--
+<fetch url="@components/layout/menu/menu.json">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+					<div class="header__actions">
+						<button class="header__darklite darklite" data-fls-darklite="" data-fls-darklite-set="" aria-label="Toggle dark mode"></button>
+						<a href="#contacts" data-fls-scrollto="#contacts" class="header__button button button--letstalk" data-fls-button="" aria-label="Scroll to contacts section">let's talk</a>
+						<button type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu" data-fls-menu="" class="header__icon-menu icon-menu">
+							<span></span>
+						</button>
+					</div>
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+				</div>
+			</header>
+			<main class="page">
+				<section data-fls-index="" class="home">
+					<section id="home" class="home__hero hero" role="region" aria-label="Hero section">
+						<div class="hero__container">
+							<div class="hero__content">
+								<p class="hero__tagline tagline" data-fls-tagline="">Frontend Developer & UI Engineer</p>
+								<h1 class="hero__title title" data-fls-title="">
+									I craft interfaces that
+									<br>
+									feel
+									<span>natural</span>
+									,
+									<span>predictable</span>
+									&
+									<span>effortless</span>
+									to use.
+								</h1>
+								<div class="hero__text">
+									<p>
+										Frontend & UI development focused on
+										<span>usability</span>
+										,
+										<span>performance</span>
+										and
+										<span>clear visual systems</span>
+										that work naturally
+                        in any environment.
+									</p>
+								</div>
+								<div class="hero__actions">
+									<a href="#contacts" aria-label="Scroll to contacts section to discuss your project" data-fls-scrollto="#contacts" class="button button--primary">Discuss your
+                        project</a>
+									<a href="#projects" data-fls-scrollto="#projects" class="button button--secondary" aria-label="Scroll to projects section">View selected
+                        work</a>
+								</div>
+								<a href="files/frontend__Vasyl_Stelmakh__CV.pdf" aria-label="Download Vasyl Stelmakh CV in PDF format" class="hero__cv" target="_blank">Download CV (PDF)</a>
+							</div>
+							<div class="hero__accent" aria-hidden="true"></div>
+						</div>
+					</section>
+					<section class="about" id="about" role="region" aria-label="About section">
+						<h2 class="visually-hidden">About me</h2>
+						<div class="about__container">
+							<div class="about__body">
+								<div class="about__media" data-fls-watcher="" data-fls-watcher-once="">
+									<div class="about__photo">
+										<picture>
+											<img alt="Portrait of Vasyl Stelmakh" class="about__photo-image" src="./assets/img/04.webp">
+										</picture>
+									</div>
+								</div>
+								<div class="about__content">
+									<article data-fls-aboutcard="" class="aboutcard" data-fls-watcher="" data-fls-watcher-once="" role="region" aria-label="About me card">
+										<div class="aboutcard__body">
+											<h3 class="aboutcard__title title" data-fls-title="">About Me</h3>
+											<div class="aboutcard__content">
+												<div class="textblock">
+													<p>
+														I'm
+														<span>Vasyl Stelmakh</span>
+														— a frontend developer and UI engineer with a
+                                        strong
+                                        background in
+                                        creative collaboration and visual
+                                        systems. My journey into frontend began not with code, but with people, ideas,
+                                        and artistic projects. That experience taught me what quality really means:
+                                        attention to
+                                        detail,
+                                        long-term thinking, and respect for
+                                        the process. In art, as in engineering, there are no shortcuts to excellence.
+													</p>
+													<p>
+														Frontend development became the space where I could combine logic, structure, and
+                                        empathy
+                                        —
+                                        building interfaces that
+                                        communicate clearly and behave predictably. I approach every project as a
+                                        system,
+                                        not
+                                        just a
+                                        set of pages. My goal is
+                                        always the same: to deliver clean, maintainable, and user-friendly solutions
+                                        that
+                                        feel
+                                        natural in any environment.
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article role="region" aria-label="Frontend core skills card" data-fls-aboutcard="" class="aboutcard" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="aboutcard__body">
+											<h3 class="aboutcard__title title" data-fls-title="">Frontend Core</h3>
+											<div class="aboutcard__content">
+												<ul class="list list--skills">
+													<li class="list__item">Semantic HTML and accessibility-first markup</li>
+													<li class="list__item">SCSS architecture with BEM methodology</li>
+													<li class="list__item">Vanilla JavaScript for UI logic and interactivity</li>
+													<li class="list__item">Responsive design and adaptive layout strategies</li>
+													<li class="list__item">SVG optimization and asset management</li>
+												</ul>
+											</div>
+										</div>
+									</article>
+									<article role="region" aria-label="My approach card" data-fls-aboutcard="" class="aboutcard" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="aboutcard__body">
+											<h3 class="aboutcard__title title" data-fls-title="">My Approach</h3>
+											<div class="aboutcard__content">
+												<ul class="list list--skills">
+													<li class="list__item">Performance tuning and visual consistency</li>
+													<li class="list__item">Component-based thinking (even without frameworks)</li>
+													<li class="list__item">Animation and micro-interactions for enhanced UX</li>
+													<li class="list__item">Clean code, documentation, and maintainable structure</li>
+												</ul>
+												<div class="textblock">
+													<p>
+														I build interfaces that are fast, consistent, and predictable. My
+                                        work is guided by engineering
+                                        discipline and attention to detail.
+													</p>
+													<p>
+														I grow through documentation, open resources, and hands‑on experimentation.
+                                        Continuous improvement matters more to me
+                                        than certificates.
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+									<article role="region" aria-label="Why frontend card" class="aboutcard" data-fls-aboutcard="" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="aboutcard__body">
+											<h3 class="aboutcard__title title" data-fls-title="">Why Frontend</h3>
+											<div class="aboutcard__content">
+												<div class="textblock">
+													<p>
+														Frontend is where engineering meets communication. It’s the layer users interact
+                                        with — and I treat it with respect. As
+                                        someone who didn’t study programming in school, I came to code later in life.
+                                        But once I discovered frontend, the system
+                                        behind the screen finally clicked.
+													</p>
+													<p>
+														I value clarity, empathy, and professionalism in both code and collaboration. I
+                                        see frontend as a way to build
+                                        relationships — between users and interfaces, between clients and developers.
+                                        And I’m committed to growing in this
+                                        field, exploring new technologies, and adapting to each project’s unique needs.
+													</p>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="projects" id="projects" data-fls-watcher="" data-fls-watcher-once="" role="region" aria-label="Projects section">
+						<div class="projects__container">
+							<div class="projects__body">
+								<div class="projects__header headersection" data-fls-headersection="">
+									<p class="headersection__tagline tagline" data-fls-tagline="">Projects</p>
+									<h2 class="headersection__title title" data-fls-title="">
+										Selected work that shows how I
+										<span>build
+                            interfaces</span>
+										and
+										<span>solve problems</span>
+									</h2>
+									<div class="headersection__description">
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolorem cupiditate quod nam
+                            dolore
+                            labore velit
+											<span>repudiandae totam</span>
+											eos ipsum. Eos consequuntur dolorem minus natus?
+										</p>
+									</div>
+								</div>
+								<div class="projects__tabs tabs tabs--projects">
+									<!-- mobile dropdown -->
+									<div class="tabs__mobile">
+										<button class="tabs__mobile-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="projects-mobile-list">All</button>
+										<ul class="tabs__mobile-list" id="projects-mobile-list" role="listbox" aria-label="Project categories">
+											<li data-filter="all" role="option" aria-selected="true" class="is-active">All</li>
+											<li data-filter="commercial" role="option" aria-selected="false">Commercial</li>
+											<li data-filter="personal" role="option" aria-selected="false">Personal</li>
+											<li data-filter="inprogress" role="option" aria-selected="false">In Progress</li>
+											<li data-filter="archived" role="option" aria-selected="false">Archived</li>
+										</ul>
+									</div>
+									<!-- desktop tabs -->
+									<nav class="tabs__navigation" role="tablist" aria-label="Project categories">
+										<button type="button" aria-pressed="true" class="tabs__title --tab-active" data-filter="all">All</button>
+										<button type="button" aria-pressed="false" class="tabs__title" data-filter="commercial">Commercial</button>
+										<button type="button" aria-pressed="false" class="tabs__title" data-filter="personal">Personal</button>
+										<button type="button" aria-pressed="false" class="tabs__title" data-filter="inprogress">In
+                            Progress</button>
+										<button type="button" aria-pressed="false" class="tabs__title" data-filter="archived">Archived</button>
+									</nav>
+									<div class="tabs__content">
+										<div class="tabs__body">
+											<article data-fls-projectcard="" class="projectcard" data-category="InProgress" data-fls-watcher="">
+												<div class="projectcard__media">
+													<picture>
+														<source media="(max-width: 600px)" srcset="./assets/img/projects/sehlvet-600.webp" type="image/webp">
+														<source media="(max-width: 1200px)" srcset="./assets/img/projects/sehlvet-1200.webp" type="image/webp">
+														<img alt="Preview of Sehlvet fashion landing page" src="./assets/img/projects/sehlvet.webp">
+													</picture>
+													<span class="projectcard__badge">2025</span>
+												</div>
+												<div class="projectcard__body">
+													<h3 class="projectcard__title">Sehlvet — Fashion Landing Page</h3>
+													<div class="projectcard__description">
+														<p>
+															A responsive landing page for the clothing brand Sehlvet, created with a focus on aesthetics, speed, and usability. Suitable for showcasing seasonal collections, brands, and customer reviews.
+														</p>
+													</div>
+													<ul class="projectcard__meta">
+														<li>HTML5</li>
+														<li>SCSS</li>
+														<li>JavaScript (ES Modules)</li>
+														<li>Swiper.js</li>
+														<li>WebP</li>
+														<li>BEM</li>
+														<li>Responsive Images</li>
+														<li>Custom Fonts</li>
+													</ul>
+													<div class="projectcard__footer">
+														<span class="projectcard__status">Completed</span>
+														<div class="projectcard__actions">
+															<a href="https://stalmax76.github.io/Sehlvet/" target="_blank" rel="noopener noreferrer">Live</a>
+															<a href="https://github.com/stalmax76/Sehlvet" target="_blank">GitHub</a>
+														</div>
+													</div>
+												</div>
+											</article>
+											<!-- модифікатори до майбутніх карток -->
+											<!--
+.projectcard--video
+.projectcard--case
+.projectcard--experiment
+.projectcard--wide
+.projectcard--compact
+-->
+											<article data-fls-projectcard="" class="projectcard" data-category="Commercial" data-fls-watcher="">
+												<div class="projectcard__media">
+													<picture>
+														<source media="(max-width: 600px)" srcset="./assets/img/projects/hansset-600.webp" type="image/webp">
+														<source media="(max-width: 1200px)" srcset="./assets/img/projects/hansset-1200.webp" type="image/webp">
+														<img alt="Project preview" src="./assets/img/projects/hansset.webp">
+													</picture>
+													<span class="projectcard__badge">2025</span>
+												</div>
+												<div class="projectcard__body">
+													<h3 class="projectcard__title">Hansset — Multi‑Page Creative Agency Website</h3>
+													<div class="projectcard__description">
+														<p>
+															A multi‑page website for a creative agency featuring custom UI components, interactive content switching, and a fully validated contact form. Built with clean semantic markup, modular JavaScript, and responsive SCSS architecture.
+														</p>
+													</div>
+													<ul class="projectcard__meta">
+														<li>HTML5</li>
+														<li>SCSS</li>
+														<li>JavaScript (ES6 Modules)</li>
+														<li>Form Validation</li>
+														<li>Custom UI Logic</li>
+													</ul>
+													<div class="projectcard__footer">
+														<span class="projectcard__status">Completed</span>
+														<div class="projectcard__actions">
+															<a href="https://stalmax76.github.io/hansset/" target="_blank" rel="noopener noreferrer">Live</a>
+															<a href="https://github.com/Stalmax76/hansset" target="_blank">GitHub</a>
+														</div>
+													</div>
+												</div>
+											</article>
+											<!-- модифікатори до майбутніх карток -->
+											<!--
+.projectcard--video
+.projectcard--case
+.projectcard--experiment
+.projectcard--wide
+.projectcard--compact
+-->
+											<article data-fls-projectcard="" class="projectcard" data-category="Personal" data-fls-watcher="">
+												<div class="projectcard__media">
+													<picture>
+														<source media="(max-width: 600px)" srcset="./assets/img/projects/ecogran-600.webp" type="image/webp">
+														<source media="(max-width: 1200px)" srcset="./assets/img/projects/ecogran-1200.webp" type="image/webp">
+														<img alt="Project preview" src="./assets/img/projects/ecogran.webp">
+													</picture>
+													<span class="projectcard__badge">Personal</span>
+												</div>
+												<div class="projectcard__body">
+													<h3 class="projectcard__title">Landing for SaaS</h3>
+													<div class="projectcard__description">
+														<p>Responsive landing page focused on conversion and performance.</p>
+													</div>
+													<ul class="projectcard__meta">
+														<li>React</li>
+														<li>SCSS</li>
+														<li>Vite</li>
+													</ul>
+													<div class="projectcard__footer">
+														<span class="projectcard__status">Completed</span>
+														<div class="projectcard__actions">
+															<a href="https://#" target="_blank" rel="noopener noreferrer">Live</a>
+															<a href="https://#" target="_blank">GitHub</a>
+														</div>
+													</div>
+												</div>
+											</article>
+											<!-- модифікатори до майбутніх карток -->
+											<!--
+.projectcard--video
+.projectcard--case
+.projectcard--experiment
+.projectcard--wide
+.projectcard--compact
+-->
+											<article data-fls-projectcard="" class="projectcard" data-category="Archived" data-fls-watcher="">
+												<div class="projectcard__media">
+													<picture>
+														<source media="(max-width: 600px)" srcset="./assets/img/projects/ecogran-600.webp" type="image/webp">
+														<source media="(max-width: 1200px)" srcset="./assets/img/projects/ecogran-1200.webp" type="image/webp">
+														<img alt="Project preview" src="./assets/img/projects/ecogran.webp">
+													</picture>
+													<span class="projectcard__badge">Archived</span>
+												</div>
+												<div class="projectcard__body">
+													<h3 class="projectcard__title">Landing for SaaS</h3>
+													<div class="projectcard__description">
+														<p>Responsive landing page focused on conversion and performance.</p>
+													</div>
+													<ul class="projectcard__meta">
+														<li>React</li>
+														<li>SCSS</li>
+														<li>Vite</li>
+													</ul>
+													<div class="projectcard__footer">
+														<span class="projectcard__status">Completed</span>
+														<div class="projectcard__actions">
+															<a href="https://#" target="_blank" rel="noopener noreferrer">Live</a>
+															<a href="https://#" target="_blank">GitHub</a>
+														</div>
+													</div>
+												</div>
+											</article>
+											<!-- модифікатори до майбутніх карток -->
+											<!--
+.projectcard--video
+.projectcard--case
+.projectcard--experiment
+.projectcard--wide
+.projectcard--compact
+-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="skills" id="skills" role="region" aria-label="Skills and tools" data-fls-watcher="" data-fls-watcher-once="">
+						<div class="skills__container">
+							<div class="skills__body">
+								<div data-fls-headersection="" class="skills__headersection headersection">
+									<p class="headersection__tagline tagline" data-fls-tagline="">Skills & Tools</p>
+									<h2 class="headersection__title title" data-fls-title="">
+										How I approach
+										<span>frontend</span>
+										work
+                        and build
+										<span>reliable interfaces</span>
+									</h2>
+									<div class="headersection__description">
+										<p>
+											These are the tools and skills I use in practice. I focus on
+											<span>clean structure</span>
+											,
+											<span>responsive
+                                layouts</span>
+											, and a workflow that
+                            makes
+											<span>collaboration simple and predictable</span>
+											for clients.
+										</p>
+									</div>
+								</div>
+								<div class="skills__cards">
+									<article class="skillscard" role="region" aria-label="Planing &amp; Thinking card" data-fls-skillscard="" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="skillscard__body">
+											<div class="skillscard__label">Planing &amp; Thinking</div>
+											<h3 class="skillscard__title">Concept &amp; &lt;span&gt;Strategy&lt;/span&gt;</h3>
+											<div class="skillscard__text">
+												<p>
+													I focus on user-centered
+													<span>design</span>
+													, Creating wireframes that reflect
+													<span>real goals</span>
+												</p>
+											</div>
+											<ul class="skillscard__list">
+												<li>UX Design</li>
+												<li>Wireframes</li>
+												<li>Interactive Prototype</li>
+											</ul>
+										</div>
+									</article>
+									<article class="skillscard" role="region" aria-label="Development card" data-fls-skillscard="" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="skillscard__body">
+											<div class="skillscard__label">Development</div>
+											<h3 class="skillscard__title">Core &lt;span&gt;Frontend&lt;/span&gt;</h3>
+											<div class="skillscard__text">
+												<p>
+													Semantic markup, responsive layouts, and
+													<span>clear structure</span>
+													. Code that works reliably across
+													<span>devices and browsers</span>
+													.
+												</p>
+											</div>
+											<ul class="skillscard__list">
+												<li>HTML</li>
+												<li>CSS / SCSS</li>
+												<li>JavaScript</li>
+											</ul>
+										</div>
+									</article>
+									<article class="skillscard" role="region" aria-label="Interface Design card" data-fls-skillscard="" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="skillscard__body">
+											<div class="skillscard__label">Interface Design</div>
+											<h3 class="skillscard__title">UI &amp;&lt;span&gt; Layout&lt;/span&gt;</h3>
+											<div class="skillscard__text">
+												<p>
+													Carefully built interfaces with
+													<span>consistent spacing</span>
+													and attention to
+													<span>visual balance</span>
+													.
+												</p>
+											</div>
+											<ul class="skillscard__list">
+												<li>Responsive</li>
+												<li>Mobile-first</li>
+												<li>Pixel accuracy</li>
+											</ul>
+										</div>
+									</article>
+									<article class="skillscard" role="region" aria-label="Process card" data-fls-skillscard="" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="skillscard__body">
+											<div class="skillscard__label">Process</div>
+											<h3 class="skillscard__title">&lt;span&gt;Workflow&lt;/span&gt; &amp; Tools</h3>
+											<div class="skillscard__text">
+												<p>
+													A
+													<span>clear workflow</span>
+													from design to code. Readable structure and
+													<span>predictable results</span>
+													.
+												</p>
+											</div>
+											<ul class="skillscard__list">
+												<li>Git</li>
+												<li>Figma</li>
+												<li>HTML</li>
+												<li>Project structure</li>
+											</ul>
+										</div>
+									</article>
+									<article class="skillscard" role="region" aria-label="Collaboration card" data-fls-skillscard="" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="skillscard__body">
+											<div class="skillscard__label">Collaboration</div>
+											<h3 class="skillscard__title">How I &lt;span&gt;Work&lt;/span&gt;</h3>
+											<div class="skillscard__text">
+												<p>
+													I stay in touch, share progress, and take
+													<span>full responsibility</span>
+													until the
+													<span>job is done</span>
+													.
+												</p>
+											</div>
+											<ul class="skillscard__list">
+												<li>Communication</li>
+												<li>Reliability</li>
+												<li>Feedback</li>
+											</ul>
+										</div>
+									</article>
+									<article class="skillscard" role="region" aria-label="Mindset card" data-fls-skillscard="" data-fls-watcher="" data-fls-watcher-once="">
+										<div class="skillscard__body">
+											<div class="skillscard__label">Mindset</div>
+											<h3 class="skillscard__title">Learning &amp; &lt;span&gt;Growth&lt;/span&gt;</h3>
+											<div class="skillscard__text">
+												<p>
+													I learn continuously,
+													<span>close knowledge gaps</span>
+													, and improve with
+													<span>each project</span>
+													.
+												</p>
+											</div>
+											<ul class="skillscard__list">
+												<li>Documentation</li>
+												<li>Practice</li>
+												<li>Improvement</li>
+											</ul>
+										</div>
+									</article>
+								</div>
+								<div class="skills__footer"></div>
+							</div>
+						</div>
+						<ul data-fls-marquee="" data-fls-marquee-speed="60" data-fls-marquee-space="20" aria-hidden="true">
+							<li>UX Design</li>
+							<li>Wireframes</li>
+							<li>Interactive Prototype</li>
+							<li>HTML</li>
+							<li>CSS/SCSS</li>
+							<li>JavaScript</li>
+							<li>Responsive</li>
+							<li>Mobile-first</li>
+							<li>Pixel accuracy</li>
+							<li>Git</li>
+							<li>Figma</li>
+							<li>Project structure</li>
+							<li>Communication</li>
+							<li>Reliability</li>
+							<li>Feedback</li>
+							<li>Documentation</li>
+							<li>Practice</li>
+							<li>Improvement</li>
+						</ul>
+					</section>
+					<section class="contacts" id="contacts" role="region" aris-label="Contacts" data-fls-watcher="" data-fls-watcher-once="">
+						<div class="contacts__container">
+							<div class="contacts__header headersection" data-fls-headersection="">
+								<p class="headersection__tagline tagline" data-fls-tagline="">Contacts</p>
+								<h2 class="headersection__title title" data-fls-title="">
+									Let's build
+									<br>
+									something
+									<span>great
+                        together</span>
+								</h2>
+								<div class="headersection__description">
+									<p>
+										If you have a project in mind or just want to say hi, feel free to reach out.
+                        I'm always open to
+										<span>new opportunities and collaborations</span>
+									</p>
+								</div>
+							</div>
+							<div class="contacts__body">
+								<form class="contacts__form form-contacts" data-fls-form="ajax" data-fls-form-popap="popap" action="/sendmail/index.php" method="POST">
+									<div class="form-contacts__intro">
+										<p>Got an idea?</p>
+										<p>
+											<span>Let</span>
+											’s talk about it.
+										</p>
+									</div>
+									<div class="form-contacts__line">
+										<input data-fls-input="" required data-fls-form-errtext="Name required" placeholder="Name" type="text" aria-label="Your name" name="name" class="form-contacts__input" autocomplete="name">
+									</div>
+									<div class="form-contacts__line">
+										<input data-fls-input="" required data-fls-form-errtext="Email error" placeholder="Email" type="email" aria-label="Your email" name="email" class="form-contacts__input" autocomplete="email">
+									</div>
+									<textarea data-fls-input-autoheight="" data-fls-input="" autocomplete="off" placeholder="Message" name="message" aria-label="Your message" class="form-contacts__input" required></textarea>
+									<button type="submit" class="button button--primary" aria-label="Send message">Send message</button>
+									<p class="form-contacts__text">I usually respond within 24 hours.</p>
+								</form>
+								<div class="contacts__social social" role="list">
+									<p class="social__title" data-fls-watcher="">Elsewhere</p>
+									<a role="listitem" href="https://www.linkedin.com/in/vasyl-stelmakh-b6645b56/" rel="noopener noreferrer" target="_blank" data-fls-watcher="" class="social__link social__link--icon-linkedin" aria-label="Open LinkedIn profile">LinkedIn</a>
+									<a role="listitem" href="https://github.com/Stalmax76" target="_blank" data-fls-watcher="" class="social__link social__link--icon-github" rel="noopener noreferrer" aria-label="Open GitHub profile">GitHub</a>
+									<a role="listitem" href="mailto:stelmakhv76@gmail.com" data-fls-watcher="" target="_blank" class="social__link social__link--icon-envelope" rel="noopener noreferrer" aria-label="Send email to Vasyl Stelmakh">Email</a>
+									<a role="listitem" href="https://www.facebook.com/stelmakhv76/" target="_blank" data-fls-watcher="" class="social__link social__link--icon-facebook" rel="noopener noreferrer" aria-label="Open Facebook profile">Facebook</a>
+									<a role="listitem" href="https://t.me/Stal_Max" target="_blank" data-fls-watcher="" class="social__link social__link--icon-telegram" rel="noopener noreferrer" aria-label="Open Telegram profile">Telegram</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer" role="contentinfo">
+				<div class="footer__container">
+					<div class="footer__top">
+						<div class="footer__brand">
+							<a href="#home" data-fls-scrollto-header="" data-fls-scrollto="#home" aria-label="Scroll to homepage">
+								<p class="footer__logo">
+									Vasyl
+									<span>St</span>
+								</p>
+							</a>
+							<p class="footer__text">Frontend Developer crafting clean digital experiences.</p>
+							<a class="footer__cv" aria-label="Download CV in PDF format" href="files/frontend__Vasyl_Stelmakh__CV.pdf" target="_blank">Download CV(PDF)</a>
+						</div>
+						<ul class="footer__menu menu__list" role="navigation" aria-label="Footer navigation">
+							<li class="menu__item">
+								<a href="#home" data-fls-scrollto-header="" data-fls-scrollto=".home" class="menu__link menu__link--active" aria-current="page">Home</a>
+							</li>
+							<li class="menu__item">
+								<a href="#about" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#about">About</a>
+							</li>
+							<li class="menu__item">
+								<a href="#projects" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#projects">Projects</a>
+							</li>
+							<li class="menu__item">
+								<a href="#skills" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#skills">Skills &
+						Tools</a>
+							</li>
+							<li class="menu__item">
+								<a href="#contacts" class="menu__link" data-fls-scrollto-header="" data-fls-scrollto="#contacts">Contacts</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__bottom">
+						<p>© 2026 Stelmakh. All rights reserved.</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
