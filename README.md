@@ -1,4 +1,4 @@
-# VasylSt — Portfolio Website
+# VasylS. — Portfolio Website
 
 A fast, responsive, and accessible personal portfolio built with **HTML**, **SCSS**, and **JavaScript**.  
 The project showcases my frontend skills, component‑based thinking, and attention to UX and performance.
