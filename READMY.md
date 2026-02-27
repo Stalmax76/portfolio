@@ -8,6 +8,7 @@ The project demonstrates my frontend skills, component‑based thinking, attenti
 ## 🚀 Live Demo
 
 **GitHub Pages:** _add link here_
+**Netlify:** _add link here_
 
 ---
 
@@ -172,3 +173,4 @@ If you'd like to collaborate or discuss a project:
 
 [GitHub](https://github.com/Stalmax76)  
 [LinkedIn](https://www.linkedin.com/in/vasyl-stelmakh-b6645b56/)
+[netlify](https://vasyls-portfolio.netlify.app/)
