@@ -8,7 +8,7 @@ The project showcases my frontend skills, component‑based thinking, and attent
 ## 🚀 Live Demo
 
 _[https://stalmax76.github.io/portfolio/]_
-_[https://vasyls-portfolio.netlify.app/]_
+_[https://vasyls.netlify.app/]_
 
 ---
 
@@ -76,4 +76,4 @@ _[https://vasyls-portfolio.netlify.app/]_
 
 © 2026 Vasyl Stelmakh
 
-This project is part of the [VasylS Portfolio](https://github.com/Stalmax76/Portfolio) [vasyls-portfolio](https://vasyls-portfolio.netlify.app/) website.
+This project is part of the [VasylS Portfolio](https://github.com/Stalmax76/Portfolio) [vasyls](https://vasyls.netlify.app/) website.

@@ -173,4 +173,4 @@ If you'd like to collaborate or discuss a project:
 
 [GitHub](https://github.com/Stalmax76)  
 [LinkedIn](https://www.linkedin.com/in/vasyl-stelmakh-b6645b56/)
-[netlify](https://vasyls-portfolio.netlify.app/)
+[netlify](https://vasyls.netlify.app/)
