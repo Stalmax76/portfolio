@@ -1,0 +1,10 @@
+Hi,
+I'm a Frontend Developer with practical experience building responsive web applications using React and modern JavaScript.
+
+I was particularly interested in your project focused on secure ticket transfers? as it combines real-world usability with API-driven functionality/  In my recent work, I've 
+build a full-stack application integrating a REST API(React + Flask + MongoDB), where I hended dynamic data rendering and user interactions.
+I focus on creating clean, intuinive interfaces and  ensuring responcive design across devices. I also have a solid understanding accessibility and performance best practices.
+I'm comfortable working independently in a remote environment and eeting deadlines, and I'd be glad to contribute to delivering a reliable and user-friendly platform.
+
+Best regards,
+Vasyl Stelmakh

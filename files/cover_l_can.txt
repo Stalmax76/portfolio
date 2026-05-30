@@ -1,0 +1,11 @@
+Hi,
+I’m a Frontend Developer focused on building clean, responsive and accessible web interfaces using HTML, SCSS, JavaScript, React and TypeScript. I enjoy working with component‑based architectures, REST APIs and modern frontend tooling.
+
+I’m particularly interested in this role at Canonical because it combines high‑fidelity UI development with strong engineering standards, collaboration with designers and a focus on performance and accessibility. This aligns perfectly with the way I approach frontend work.
+
+In my recent projects, I built a full‑stack image search application (React + Flask + MongoDB), implemented responsive layouts, reusable components, API integration and optimized user experience across devices. I’m comfortable working in a remote environment, managing tasks independently and delivering high‑quality UI.
+
+I would be glad to contribute to Canonical’s web team and help build consistent, well‑designed and user‑focused interfaces.
+
+Best regards,
+Vasyl Stelmakh

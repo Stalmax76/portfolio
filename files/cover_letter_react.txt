@@ -1,0 +1,14 @@
+Hi,
+
+I’m a Frontend Developer with hands-on experience in React and API integration.
+
+I’ve built a full-stack image search application and I’m currently improving my skills in TypeScript and state management.
+
+I would be glad to contribute to your team and continue growing as a developer. 
+
+If possible, I would also appreciate any feedback regarding my application.
+
+Thank you for your time and consideration.
+
+Best regards,  
+Vasyl
